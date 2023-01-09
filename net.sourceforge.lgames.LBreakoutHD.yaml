@@ -1,6 +1,6 @@
 app-id: net.sourceforge.lgames.LBreakoutHD
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 finish-args:
   - --device=dri
@@ -9,6 +9,8 @@ finish-args:
   - --socket=pulseaudio
   # LBreakoutHD does not respect XDG base directories
   - --persist=.lbreakouthd
+  - --persist=.lbreakouthd/levels
+  - --persist=.lbreakouthd/themes
 command: lbreakouthd
 cleanup:
   - /include
@@ -25,20 +27,24 @@ modules:
   - shared-modules/SDL/SDL_ttf-2.0.11.json
   - name: lbreakouthd
     buildsystem: autotools
+    config-opts:
+      - --localstatedir=/var/data
+      #- --datarootdir=/app/shared-modules
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.0.9.tar.gz
-        sha256: 307c0ae237837d9492e2387ffff8d6d3fab89ed33822e0747d0f01b1aab4774b
+        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.1.1.tar.gz
+        sha256: 9639d9a6e57d1cf3d1e5b81d6f213c814b5be26f89a69c469b7315ebdd6cc3b1
       - type: shell
         commands:
           - cp -p /usr/share/automake-*/config.{sub,guess} .
       - type: file
         path: net.sourceforge.lgames.LBreakoutHD.png
       - type: file
-        path: net.sourceforge.lgames.LBreakoutHD.desktop
+        path: net.sourceforge.lgames.LBreakoutHD128.png
       - type: file
         path: net.sourceforge.lgames.LBreakoutHD.metainfo.xml
     post-install:
       - install -Dm644 net.sourceforge.lgames.LBreakoutHD.png /app/share/icons/hicolor/256x256/apps/net.sourceforge.lgames.LBreakoutHD.png
-      - install -Dm644 net.sourceforge.lgames.LBreakoutHD.desktop /app/share/applications/net.sourceforge.lgames.LBreakoutHD.desktop
+      - install -Dm644 net.sourceforge.lgames.LBreakoutHD128.png /app/share/icons/hicolor/128x128/apps/net.sourceforge.lgames.LBreakoutHD.png
+      - desktop-file-install --dir="/app/share/applications" --set-icon=net.sourceforge.lgames.LBreakoutHD lbreakouthd.desktop
       - install -Dm644 net.sourceforge.lgames.LBreakoutHD.metainfo.xml /app/share/appdata/net.sourceforge.lgames.LBreakoutHD.metainfo.xml
