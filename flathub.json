@@ -1,4 +1,4 @@
 {
-  "skip-icons-check": true,
+  "skip-icons-check": false,
   "skip-appstream-check": false
 }
