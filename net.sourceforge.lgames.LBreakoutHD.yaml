@@ -2,6 +2,7 @@ app-id: net.sourceforge.lgames.LBreakoutHD
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
+rename-desktop-file: lbreakouthd.desktop
 finish-args:
   - --device=dri
   - --share=ipc
@@ -38,12 +39,13 @@ modules:
         commands:
           - cp -p /usr/share/automake-*/config.{sub,guess} .
       - type: file
-        path: net.sourceforge.lgames.LBreakoutHD.png
+        path: net.sourceforge.lgames.LBreakoutHD128.png
       - type: file
-        path: net.sourceforge.lgames.LBreakoutHD.desktop
+        path: net.sourceforge.lgames.LBreakoutHD.png
       - type: file
         path: net.sourceforge.lgames.LBreakoutHD.metainfo.xml
     post-install:
-      - install -Dm 644 net.sourceforge.lgames.LBreakoutHD.png /app/share/icons/hicolor/256x256/apps/net.sourceforge.lgames.LBreakoutHD.png
-      - desktop-file-install --dir="/app/share/applications" net.sourceforge.lgames.LBreakoutHD.desktop
+      - install -Dm 644 net.sourceforge.lgames.LBreakoutHD.png -t /app/share/icons/hicolor/256x256/apps/
+      - install -Dm 644 net.sourceforge.lgames.LBreakoutHD128.png /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
+      - desktop-file-edit --set-icon=$FLATPAK_ID /app/share/applications/lbreakouthd.desktop
       - install -Dm644 net.sourceforge.lgames.LBreakoutHD.metainfo.xml /app/share/appdata/net.sourceforge.lgames.LBreakoutHD.metainfo.xml
