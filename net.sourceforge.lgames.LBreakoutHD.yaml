@@ -29,7 +29,7 @@ modules:
   - name: lbreakouthd
     buildsystem: autotools
     config-opts:
-      - --localstatedir=/var/data
+      - --localstatedir=~/.var/app/net.sourceforge.lgames.LBreakoutHD/data
       #- --datarootdir=/app/shared-modules
     sources:
       - type: archive
