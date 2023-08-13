@@ -33,8 +33,8 @@ modules:
       #- --datarootdir=/app/shared-modules
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.1.1.tar.gz
-        sha256: 9639d9a6e57d1cf3d1e5b81d6f213c814b5be26f89a69c469b7315ebdd6cc3b1
+        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.1.3.tar.gz
+        sha256: 069179f377f689fe05789d858bff06658ba1e53dfb19774dabf5b0e0b33ae706
       - type: shell
         commands:
           - cp -p /usr/share/automake-*/config.{sub,guess} .
