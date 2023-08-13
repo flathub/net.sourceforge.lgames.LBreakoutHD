@@ -29,7 +29,7 @@ modules:
   - name: lbreakouthd
     buildsystem: autotools
     config-opts:
-      - --localstatedir=$XDG_DATA_HOME
+      - --localstatedir=/var/data
       #- --datarootdir=/app/shared-modules
     sources:
       - type: archive
