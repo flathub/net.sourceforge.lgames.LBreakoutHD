@@ -30,8 +30,8 @@ modules:
       #- --datarootdir=/app/shared-modules
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.1.9.tar.gz
-        sha256: 1c8cd9707ff2181457ffd53216e472bac024ce0ce144490c44d68ffbabd00be1
+        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.1.10.tar.gz
+        sha256: bb2962f60f0aaa9c27a944649c0fc64e61d28208a6b91c3821371dc73d051974
         x-checker-data:
           type: anitya
           # project-id obtained from https://release-monitoring.org/
