@@ -33,52 +33,49 @@
   <update_contact>nbenitezl_AT_gmail.com</update_contact>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="1.1.10" date="2025-05-10">
-      <url>https://sourceforge.net/p/lgames/news/2025/05/lbreakouthd-1110-released/</url>
+    <release version="1.2.1" date="2026-01-03">
       <description>
-        <p>
-          I've added a menu option to disable/enable gamepad support and a custom cursor. Also levelsets Picky by Michael Uplawski
-          and JustGoForIt were updated.
-        </p>
+        <p>Some minor changes: </p>
+        <p>The Classic theme uses the proper warp icon geometry for full compatibility with retro themes.</p>
+        <p>Instead of just a list index the theme name is saved in the config file to prevent unwanted switches on installing new themes.</p>
+        <p>And the pseudo-set Random20 has been improved to discard "hard" levels (too many difficult bricks, too close to paddle, ...)
+          to make it more casual and fun.</p>
+      </description>
+    </release>
+    <release version="1.1.10" date="2025-05-10">
+      <description>
+        <p>I've added a menu option to disable/enable gamepad support and a custom cursor.</p>
+        <p>Also levelsets Picky by Michael Uplawski and JustGoForIt were updated.</p>
       </description>
     </release>
     <release version="1.1.9" date="2024-07-15">
-    <url>https://sourceforge.net/p/lgames/news/2024/07/lbreakouthd-119-released/</url>
-    <description>
-      <p>Just a very minor update that installs the icon according to specification (again).</p>
-    </description>
+      <description>
+        <p>Just a very minor update that installs the icon according to specification (again).</p>
+      </description>
     </release>
     <release version="1.1.3" date="2023-05-12">
-      <url>https://sourceforge.net/projects/lgames/files/lbreakouthd/</url>
       <description>
-        <p>
-          Hiscores are now saved for the windows port. Somehow destructing the client game object does
-          not work properly in windows but with this workaround at least the hiscores get saved. Also I removed the
-          intl directory from the source since the latest gettext version only supports external libintl (either in
-          libc or as library).
-        </p>
+        <p>Hiscores are now saved for the windows port.</p>
+        <p>Somehow destructing the client game object does not work properly in windows but with this workaround at least the hiscores get saved.</p>
+        <p>Also I removed the intl directory from the source since the latest gettext version only supports external libintl (either in
+          libc or as library).</p>
     </description>
     </release>
     <release version="1.1.2" date="2023-03-18">
-      <url>https://sourceforge.net/projects/lgames/files/lbreakouthd/</url>
       <description>
-        <p>
-          Some configuration and installation issues were fixed, e.g., icons get properly installed now.
-          Also the correct resolution will be selected on multi-display setups with different ratios.
-          A rare segmentation fault has been fixed and the mini game "Outbreak" has been tweaked and is a bit easier now.
-        </p>
+        <p>Some configuration and installation issues were fixed, e.g., icons get properly installed now.</p>
+        <p>Also the correct resolution will be selected on multi-display setups with different ratios.</p>
+        <p>A rare segmentation fault has been fixed and the mini game "Outbreak" has been tweaked and is a bit easier now.</p>
       </description>
     </release>
     <release version="1.1.1" date="2022-12-27">
-      <url>https://sourceforge.net/projects/lgames/files/lbreakouthd/</url>
       <description>
         <p>Added editor.</p>
        </description>
     </release>
     <release version="1.0.9" date="2022-03-02">
-      <url>https://sourceforge.net/projects/lgames/files/lbreakouthd/</url>
       <description>
-        <p>Fixed texture problem with old hardware (2022/03/02 MS)</p>
+        <p>Fixed texture problem with old hardware.</p>
       </description>
     </release>
   </releases>
