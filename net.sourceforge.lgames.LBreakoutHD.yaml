@@ -1,6 +1,6 @@
 app-id: net.sourceforge.lgames.LBreakoutHD
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 rename-desktop-file: lbreakouthd.desktop
 finish-args:
@@ -23,6 +23,9 @@ cleanup:
   - '*.a'
 modules:
   - shared-modules/glu/glu-9.json
+  - shared-modules/SDL2/SDL2_ttf.json
+  - shared-modules/SDL2/SDL2_image.json
+
   - name: lbreakouthd
     buildsystem: autotools
     config-opts:
@@ -30,8 +33,8 @@ modules:
       #- --datarootdir=/app/shared-modules
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.1.10.tar.gz
-        sha256: bb2962f60f0aaa9c27a944649c0fc64e61d28208a6b91c3821371dc73d051974
+        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.2.1.tar.gz
+        sha256: 73f4d955e393fb0d4c2f44798d385567cfda9afc8c6245ac484eaf4ab4458ef3
         x-checker-data:
           type: anitya
           # project-id obtained from https://release-monitoring.org/
