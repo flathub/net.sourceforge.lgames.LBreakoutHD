@@ -2,6 +2,8 @@ app-id: net.sourceforge.lgames.LBreakoutHD
 runtime: org.freedesktop.Platform
 runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
+command: lbreakouthd
+rename-icon: lbreakouthd
 rename-desktop-file: lbreakouthd.desktop
 finish-args:
   - --device=dri
@@ -13,7 +15,6 @@ finish-args:
   - --persist=.lbreakouthd
   - --persist=.lbreakouthd/levels
   - --persist=.lbreakouthd/themes
-command: lbreakouthd
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -31,10 +32,12 @@ modules:
     config-opts:
       - --localstatedir=/var/data
       #- --datarootdir=/app/shared-modules
+    post-install:
+      - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.2.1.tar.gz
-        sha256: 73f4d955e393fb0d4c2f44798d385567cfda9afc8c6245ac484eaf4ab4458ef3
+        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.2.2.tar.gz
+        sha256: 6f7ccb649f25b0f34aeb9774363c253f8f7fc40a9a1543b0f1d38d1a4b81a4de
         x-checker-data:
           type: anitya
           # project-id obtained from https://release-monitoring.org/
@@ -45,12 +48,4 @@ modules:
         commands:
           - cp -p /usr/share/automake-*/config.{sub,guess} .
       - type: file
-        path: net.sourceforge.lgames.LBreakoutHD128.png
-      - type: file
         path: net.sourceforge.lgames.LBreakoutHD.metainfo.xml
-    post-install:
-      - install -Dm 644 net.sourceforge.lgames.LBreakoutHD128.png /app/share/icons/hicolor/128x128/apps/$FLATPAK_ID.png
-      - mv /app/share/icons/hicolor/256x256/apps/lbreakouthd.png /app/share/icons/hicolor/256x256/apps/$FLATPAK_ID.png
-      - mv /app/share/icons/hicolor/48x48/apps/lbreakouthd.png /app/share/icons/hicolor/48x48/apps/$FLATPAK_ID.png
-      - desktop-file-edit --set-icon=$FLATPAK_ID /app/share/applications/lbreakouthd.desktop
-      - install -Dm644 net.sourceforge.lgames.LBreakoutHD.metainfo.xml /app/share/appdata/net.sourceforge.lgames.LBreakoutHD.metainfo.xml
