@@ -3,13 +3,23 @@
   <id>net.sourceforge.lgames.LBreakoutHD</id>
   <launchable type="desktop-id">net.sourceforge.lgames.LBreakoutHD.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0</project_license>
-  <developer_name>Michael Speck</developer_name>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer id="net.sourceforge.lgames">
+    <name>Michael Speck</name>
+  </developer>
   <name>LBreakoutHD</name>
   <summary>Arkanoid / Breakout alike game</summary>
   <description>
     <p>LBreakoutHD is a clone of popular games such as Arkanoid or Breakout</p>
   </description>
+  <url type="homepage">https://lgames.sourceforge.io/LBreakoutHD/</url>
+  <url type="help">https://sourceforge.net/p/lgames/code/HEAD/tree/trunk/lbreakouthd/README</url>
+  <url type="bugtracker">https://sourceforge.net/p/lgames/bugs/</url>
+  <url type="contact">https://lgames.sourceforge.io/contact.php</url>
+  <url type="donation">https://lgames.sourceforge.io/donate.php</url>
+  <url type="vcs-browser">https://sourceforge.net/p/lgames/code/HEAD/tree/trunk/lbreakouthd/</url>
+  <update_contact>nbenitezl_AT_gmail.com</update_contact>
+  <content_rating type="oars-1.1"/>
   <screenshots>
     <screenshot type="default">
       <image type="source" width="1920" height="1080">https://lgames.sourceforge.io/LBreakoutHD/ss0.jpg</image>
@@ -24,14 +34,6 @@
       <caption>Other level playing</caption>
     </screenshot>
   </screenshots>
-  <url type="homepage">https://lgames.sourceforge.io/LBreakoutHD/</url>
-  <url type="help">https://sourceforge.net/p/lgames/code/HEAD/tree/trunk/lbreakouthd/README</url>
-  <url type="bugtracker">https://sourceforge.net/p/lgames/bugs/</url>
-  <url type="contact">https://lgames.sourceforge.io/contact.php</url>
-  <url type="donation">https://lgames.sourceforge.io/donate.php</url>
-  <url type="vcs-browser">https://sourceforge.net/p/lgames/code/HEAD</url>
-  <update_contact>nbenitezl_AT_gmail.com</update_contact>
-  <content_rating type="oars-1.1"/>
   <releases>
     <release version="1.2.2" date="2026-02-20">
       <description>
