@@ -10,7 +10,10 @@
   <name>LBreakoutHD</name>
   <summary>Arkanoid / Breakout alike game</summary>
   <description>
-    <p>LBreakoutHD is a clone of popular games such as Arkanoid or Breakout</p>
+    <p>LBreakoutHD is a remaster of LBreakout2, a game similar to Breakout and xboing.</p>
+    <p>The player controls a paddle at the bottom of the screen, and uses it to bounce
+      one or more balls which destroy bricks; the paddle can also be used to collect
+      various extras with positive or negative effects.</p>
   </description>
   <url type="homepage">https://lgames.sourceforge.io/LBreakoutHD/</url>
   <url type="help">https://sourceforge.net/p/lgames/code/HEAD/tree/trunk/lbreakouthd/README</url>
