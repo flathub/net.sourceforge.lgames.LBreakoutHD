@@ -37,8 +37,8 @@ modules:
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: archive
-        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.2.3.tar.gz
-        sha256: effca8b96e4a87dfbc92ca1570f4e306e3fcc34efff7451eca11b4b72d1519c8
+        url: https://downloads.sourceforge.net/project/lgames/lbreakouthd/lbreakouthd-1.2.4.tar.gz
+        sha256: 4732c3852ba0030fecca65689591ac582c86af46b1a21b274640ffc6cd8fc826
         x-checker-data:
           type: anitya
           # project-id obtained from https://release-monitoring.org/
