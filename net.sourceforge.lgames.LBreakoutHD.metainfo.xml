@@ -39,7 +39,9 @@
   </screenshots>
   <releases>
     <release version="1.2.4" date="2026-09-05">
-      <description></description>
+      <description>
+        <p>The Swedish translation has been updated by Jonatan Nyberg and a (rare) crash has been fixed thanks to Ricardo Garcia.</p>
+      </description>
     </release>
     <release version="1.2.3" date="2026-06-22">
       <description>
